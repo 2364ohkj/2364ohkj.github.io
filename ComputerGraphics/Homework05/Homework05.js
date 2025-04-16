@@ -13,7 +13,8 @@ let isInitialized = false;
 let viewMatrix = mat4.create();
 let projMatrix = mat4.create();
 const cameraCircleRadius = 3.0;
-const cameraCircleSpeed = 45.0;
+const cameraCircleSpeedY = 45.0;
+const cameraCircleSpeedXZ = 90.0;
 const squarePyramid = new SquarePyramid(gl);
 const axes = new Axes(gl, 1.8);
 
@@ -69,9 +70,9 @@ function render() {
     gl.enable(gl.DEPTH_TEST);
 
     // Viewing transformation matrix
-    let camX = cameraCircleRadius * Math.sin(glMatrix.toRadian(cameraCircleSpeed * elapsedTime));
-    let camY =  5 * Math.sin(glMatrix.toRadian(cameraCircleSpeed * elapsedTime)) + 5;
-    let camZ = cameraCircleRadius * Math.cos(glMatrix.toRadian(cameraCircleSpeed * elapsedTime));
+    let camX = cameraCircleRadius * Math.sin(glMatrix.toRadian(cameraCircleSpeedXZ * elapsedTime));
+    let camY =  5 * Math.sin(glMatrix.toRadian(cameraCircleSpeedY * elapsedTime)) + 5;
+    let camZ = cameraCircleRadius * Math.cos(glMatrix.toRadian(cameraCircleSpeedXZ * elapsedTime));
     mat4.lookAt(viewMatrix, 
         vec3.fromValues(camX, camY, camZ), // camera position
         vec3.fromValues(0, 0, 0), // look at origin
