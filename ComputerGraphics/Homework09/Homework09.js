@@ -47,22 +47,22 @@ const planets = [
   },
   {
     name: 'Mercury', radius: 1.5, distance: 20,
-    texture: 'textures/mercury.jpg',
+    texture: './textures/mercury.jpg',
     rotationSpeed: 0.02, orbitSpeed: 0.02
   },
   {
     name: 'Venus', radius: 3, distance: 35,
-    texture: 'textures/venus.jpg',
+    texture: './textures/venus.jpg',
     rotationSpeed: 0.015, orbitSpeed: 0.015
   },
   {
     name: 'Earth', radius: 3.5, distance: 50,
-    texture: 'textures/earth.jpg',
+    texture: './textures/earth.jpg',
     rotationSpeed: 0.01, orbitSpeed: 0.01
   },
   {
     name: 'Mars', radius: 2.5, distance: 65,
-    texture: 'textures/mars.jpg',
+    texture: './textures/mars.jpg',
     rotationSpeed: 0.008, orbitSpeed: 0.008
   }
 ];
